@@ -1,15 +1,26 @@
-".container": {
+"Window": {
 	backgroundColor:"white"
 }
 
+"View": {
+	width: Ti.UI.FILL,
+	height: "auto",
+	layout:"vertical"
+}
+
 "Label": {
-	width: Ti.UI.SIZE,
-	height: Ti.UI.SIZE,
+	width: Ti.UI.FILL,
 	color: "#000"
 }
 
-"#label": {
-	font: {
-		fontSize: 12
-	}
+"TextField": {
+	width: Ti.UI.FILL,
+	color: "#000",
+	top: "20dp"
+}
+
+"Button": {
+	width: Ti.UI.FILL,
+	color: "#000",
+	top: "20dp"
 }

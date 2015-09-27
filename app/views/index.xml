@@ -1,5 +1,9 @@
 <Alloy>
-	<Window class="container">
-		<Label id="label" onClick="doClick">Hello, World</Label>
+	<Window>
+		<View>
+			<Label id="label">Plase insert your CPR number:</Label>
+			<TextField id="cpr_number" hintText="Type in your CPR number without dash"></TextField>
+			<Button id="cpr_continue" onClick="onSubmit">Continue</Button>
+		</View>
 	</Window>
 </Alloy>
