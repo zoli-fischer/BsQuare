@@ -17,7 +17,8 @@ Alloy.Globals.activityIndicatorWnd = (function() {
 	//hide indicator
 	self.hide = function() {
 		//close wnd
-		self.activityIndicatorWin.close();
+		if ( self.activityIndicatorWin )
+			self.activityIndicatorWin.close();
 		
 		//release memory
 		self.delete();
@@ -97,11 +98,14 @@ Alloy.Globals.activityIndicatorWnd = (function() {
 	//delete object
 	self.delete = function() {
 		//remove child from wnd
-		self.activityIndicatorWin.remove(activityIndicator);
+		if ( self.activityIndicatorWin && self.activityIndicator )
+			self.activityIndicatorWin.remove(self.activityIndicator);
 		
 		//release memory
-		delete self.activityIndicatorWin;	
-		delete self.activityIndicator;	
+		if ( self.activityIndicator )
+			delete self.activityIndicator;	
+		if ( self.activityIndicatorWin )
+			delete self.activityIndicatorWin;			
 	};
 	
 	return self;

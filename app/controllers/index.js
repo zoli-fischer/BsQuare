@@ -33,7 +33,6 @@ function isValidCPR( cpr ) {
     return true;
 };
 
-$.cpr_number.value = '1510833607';
 //continue with cpr valid or not
 function cprValidated( valid ) {
 	
