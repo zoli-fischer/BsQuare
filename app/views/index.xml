@@ -1,9 +1,10 @@
 <Alloy>
 	<Window>
 		<View>
-			<Label id="label">Plase insert your CPR number:</Label>
-			<TextField id="cpr_number" hintText="Type in your CPR number without dash"></TextField>
-			<Button id="cpr_continue" onClick="onSubmit">Continue</Button>
+			<ImageView id="image" image="/images/logo.jpg" />
+			<Label>Enter your CPR-number</Label>
+			<TextField id="cpr_number" onReturn="doSubmit"></TextField>
+			<Button onClick="doSubmit">Login</Button>
 		</View>
 	</Window>
 </Alloy>

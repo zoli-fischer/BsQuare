@@ -3,10 +3,10 @@
     <id>com.bsquare.project</id>
     <name>BsQuare</name>
     <version>1.0</version>
-    <publisher>Zoltan</publisher>
+    <publisher>BsQuare Audio Test</publisher>
     <url>http://</url>
     <description/>
-    <copyright>2015 by Zoltan</copyright>
+    <copyright>2015 by BsQuare</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>

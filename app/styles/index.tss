@@ -9,18 +9,29 @@
 }
 
 "Label": {
-	width: Ti.UI.FILL,
-	color: "#000"
+	width: '180dp',
+	top: "20dp",
+	color: "#000",
+	textAlign: 'center'
 }
 
 "TextField": {
-	width: Ti.UI.FILL,
-	color: "#000",
-	top: "20dp"
+	width: '180dp',
+	color: "#000",	
+	borderRadius: '0dp',
+	borderColor: '#bbbbbb',
+	borderWidth: '0.5dp'
 }
 
 "Button": {
-	width: Ti.UI.FILL,
-	color: "#000",
-	top: "20dp"
+	width: '70dp',
+	fontWeight: 'bold',
+	fontSize: '16pt',
+	height: '30dp',
+	backgroundColor: '#333333',
+	color: "#fff",
+	top: "20dp",
+	borderRadius: '0dp',
+	borderColor: '#000000',
+	borderWidth: '0.5dp'
 }
