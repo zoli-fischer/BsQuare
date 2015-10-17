@@ -16,7 +16,7 @@
 }
 
 "TextField": {
-	width: '180dp',
+	width: '220dp',
 	color: "#000",	
 	borderRadius: '0dp',
 	borderColor: '#bbbbbb',

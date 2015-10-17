@@ -37,6 +37,7 @@ function isValidCPR( cpr ) {
 function cprValidated( valid ) {
 	
 	//hide activity indicator
+	/*
 	Alloy.Globals.activityIndicatorWnd.hide();
 	
 	//check if valid
@@ -44,11 +45,13 @@ function cprValidated( valid ) {
 		alert('CPR number is valid.');
 	} else {
 		$.cpr_number.focus();
-		alert('Please insert a valid CPR number.');
+		alert(L('insert_valid_cpr'));
 	};
+	*/
 	
 };
 
+//ajax request client
 var xhr = null;
 
 //on submit form
@@ -61,7 +64,7 @@ function doSubmit() {
 			
 			//show activity indicator
 			Alloy.Globals.activityIndicatorWnd.show({ 
-				message: 'Validating CPR number...',
+				message: L('app_loading'),
 				onBack: function() {		
 					//abort ajax call
 					xhr.abort();
@@ -94,7 +97,7 @@ function doSubmit() {
 			});
 			
 			//http://zoltan.web2it.net/cpr-validate.php?cpr=#CPR# -> http://cpr-validering.dk/api/api/validate
-			xhr.open('GET',"http://zoltan.web2it.net/cpr-validate.php?cpr="+$.cpr_number.value, true );
+			xhr.open('GET',Alloy.CFG.cprApiUrl+"?cpr="+$.cpr_number.value, true );
 			xhr.send();	
 		} else {
 			

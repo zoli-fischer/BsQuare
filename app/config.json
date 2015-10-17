@@ -1,5 +1,7 @@
 {
-	"global": {},
+	"global": {
+		"cprApiUrl": "http://zoltan.web2it.net/cpr-validate.php"		
+	},
 	"env:development": {},
 	"env:test": {},
 	"env:production": {},

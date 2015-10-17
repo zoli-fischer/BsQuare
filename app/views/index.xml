@@ -2,9 +2,9 @@
 	<Window>
 		<View>
 			<ImageView id="image" image="/images/logo.jpg" />
-			<Label>Enter your CPR-number</Label>
+			<Label>L('enter_cpr')</Label>
 			<TextField id="cpr_number" onReturn="doSubmit"></TextField>
-			<Button onClick="doSubmit">Login</Button>
+			<Button onClick="doSubmit" titleid="btn_login"></Button>		
 		</View>
 	</Window>
 </Alloy>

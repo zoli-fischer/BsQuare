@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<!--global-->
+	<string name="app_title">BSquare Hearing Test</string>
+	<string name="app_loading">Please wait...</string>
+	
+	<!--index-->
+	<string name="insert_valid_cpr">Please insert a valid CPR number.</string>
+	<string name="enter_cpr">Enter your CPR-number</string>
+	<string name="btn_login">Continue</string>
+	
+	<!--menu-->
+	<string name="menu_help">Help</string>
+	<string name="menu_about">About app</string>
+	
+</resources>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>com.bsquare.project</id>
-    <name>BsQuare</name>
+    <name>BsQuare Hearing Test</name>
     <version>1.0</version>
-    <publisher>BsQuare Audio Test</publisher>
-    <url>http://</url>
+    <publisher>BsQuare</publisher>
+    <url></url>
     <description/>
     <copyright>2015 by BsQuare</copyright>
     <icon>appicon.png</icon>
@@ -34,7 +34,12 @@
                 <key>UIStatusBarHidden</key>
                 <false/>
                 <key>UIStatusBarStyle</key>
-                <string>UIStatusBarStyleDefault</string>
+                <string>UIStatusBarStyleDefault</string>                                
+                <key>CFBundleLocalizations</key>
+                <array>
+                    <string>en</string>
+                    <string>da</string>
+                </array>            
             </dict>
         </plist>
     </ios>

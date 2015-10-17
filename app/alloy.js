@@ -34,10 +34,8 @@ Alloy.Globals.activityIndicatorWnd = (function() {
 		//set up activity indicator wnd
 		self.activityIndicatorWin = Ti.UI.createWindow({
 	 		backgroundColor: 'white',
-	  		fullscreen: true,
-		    modal: true,
-		    tabBarHidden: true,
-		    navBarHidden: true
+	 		fullscreen: false,
+		    modal: false
 		});
 	
 		//set up activity indicator
@@ -62,9 +60,9 @@ Alloy.Globals.activityIndicatorWnd = (function() {
 			 	if ( self.activityIndicator )
 					self.activityIndicator.show();	  
 			 	
-			 	//hide activity bar 
-			 	if ( Ti.Platform.name === "android" && this && this.activity )
-				  	this.activity.actionBar.hide();
+			 	//set title 
+			 	if ( Ti.Platform.name === "android" && this && this.activity )			 		
+			 		this.activity.actionBar.title = L('app_title');
 				
 			});
 		
@@ -79,15 +77,6 @@ Alloy.Globals.activityIndicatorWnd = (function() {
 						return r;
 				}	
 				
-				/*
-				this.fireEvent('activity_canceled', {});
-				if (webview.canGoBack()) {
-			        webview.goBack();
-			    } else {
-			       a.show(); // show the leaving dialog
-			    }
-			    return false;
-				*/
 			});
 		
 		//open wnd
@@ -112,7 +101,7 @@ Alloy.Globals.activityIndicatorWnd = (function() {
 })();
 
 //set up window action bar
-Alloy.Globals.setActionBar = function( view, showBack ) {
+Alloy.Globals.setActionBar = function( view, showBack ) {	
 	if ( Ti.Platform.name === "android" && view && view.activity ) {
 		var actionBar = view.activity.actionBar;
 		
@@ -133,26 +122,26 @@ Alloy.Globals.setActionBar = function( view, showBack ) {
 		actionBar.show();
 		
 		//set title
-		actionBar.title = 'BsQuare Audio Test';
+		actionBar.title = L('app_title');
 		
 		//create activity bar menu
 		view.activity.onCreateOptionsMenu = function(e) { 
 			var menuItemHelp = e.menu.add({ 
-				title : "Help", 
+				title : L('menu_help'), 
 				icon : "", 
 				showAsAction : Ti.Android.SHOW_AS_ACTION_WITH_TEXT 
 			});
 			menuItemHelp.addEventListener("click", function(e) { 
-				alert('Help'); 
+				alert(L('menu_help')); 
 			}); 
 			
 			var menuItemAbout = e.menu.add({ 
-				title : "About", 
+				title : L('menu_about'), 
 				icon : "", 
 				showAsAction : Ti.Android.SHOW_AS_ACTION_WITH_TEXT 
 			});
 			menuItemAbout.addEventListener("click", function(e) { 
-				alert('About'); 
+				alert(L('menu_about')); 
 			}); 
 		};
 	
