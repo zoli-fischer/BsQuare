@@ -101,12 +101,15 @@ Alloy.Globals.activityIndicatorWnd = (function() {
 })();
 
 //set up window action bar
-Alloy.Globals.setActionBar = function( view, showBack ) {	
+Alloy.Globals.setActionBar = function( view, showBack, showMenu ) {	
 	if ( Ti.Platform.name === "android" && view && view.activity ) {
 		var actionBar = view.activity.actionBar;
 		
 		//get showBack value
 		showBack = typeof showBack === 'undefined' ? false : showBack;
+		
+		//get showMenu value
+		showMenu = typeof showMenu === 'undefined' ? true : showMenu;
 		
 		if ( showBack ) {
 			//show back button
@@ -124,26 +127,34 @@ Alloy.Globals.setActionBar = function( view, showBack ) {
 		//set title
 		actionBar.title = L('app_title');
 		
-		//create activity bar menu
-		view.activity.onCreateOptionsMenu = function(e) { 
-			var menuItemHelp = e.menu.add({ 
-				title : L('menu_help'), 
-				icon : "", 
-				showAsAction : Ti.Android.SHOW_AS_ACTION_WITH_TEXT 
-			});
-			menuItemHelp.addEventListener("click", function(e) { 
-				alert(L('menu_help')); 
-			}); 
-			
-			var menuItemAbout = e.menu.add({ 
-				title : L('menu_about'), 
-				icon : "", 
-				showAsAction : Ti.Android.SHOW_AS_ACTION_WITH_TEXT 
-			});
-			menuItemAbout.addEventListener("click", function(e) { 
-				alert(L('menu_about')); 
-			}); 
+		if ( showMenu ) {
+			//create activity bar menu
+			view.activity.onCreateOptionsMenu = function(e) { 
+				var menuItemHelp = e.menu.add({ 
+					title : L('menu_help'), 
+					icon : "", 
+					showAsAction : Ti.Android.SHOW_AS_ACTION_WITH_TEXT 
+				});
+				menuItemHelp.addEventListener("click", function(e) { 
+					Alloy.Globals.showHelp( { parent: view } ); 
+				}); 
+				
+				var menuItemAbout = e.menu.add({ 
+					title : L('menu_about'), 
+					icon : "", 
+					showAsAction : Ti.Android.SHOW_AS_ACTION_WITH_TEXT 
+				});
+				menuItemAbout.addEventListener("click", function(e) { 
+					alert(L('menu_about')); 
+				}); 
+			};
 		};
-	
+		
 	};
+};
+
+//show help window
+Alloy.Globals.showHelp = function( opts ) {
+	//create help controller and open view
+	Alloy.createController("help", opts).getView().open();
 };

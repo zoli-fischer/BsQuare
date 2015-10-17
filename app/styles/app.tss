@@ -26,5 +26,5 @@ overrode the settings with other TSS, XML, or JS settings:
 */
 
 "Window": {
-   navBarHidden: true
+	backgroundColor:"white"
 }

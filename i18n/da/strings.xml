@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
 	<!--global-->
-	<string name="app_title">BSquare Hearing Test (DA)</string>
+	<string name="app_title">BSquare Hearing Test</string>
 	<string name="app_loading">Vent venligst...</string>
 	
 	<!--index-->
@@ -12,5 +12,20 @@
 	<!--menu-->
 	<string name="menu_help">Hjælp</string>
 	<string name="menu_about">Om app</string>
+	
+	<!--help-->
+	<string name="help_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+\n\nSed varius dui et orci accumsan, et rutrum mauris dictum. Sed id ante vitae diam ornare eleifend quis eget ligula. 
+\n\nVivamus ornare egestas scelerisque. Quisque mollis dictum quam vitae bibendum. Nullam vitae elit eget ex pulvinar convallis. Sed nec sollicitudin felis, in tempor sapien. Ut sagittis fringilla metus, nec rutrum dolor mollis tempus. In id ligula eleifend, semper odio a, mollis sem. Fusce ac dolor bibendum, blandit velit non, laoreet magna. Ut leo turpis, molestie sit amet suscipit in, commodo at enim. Nunc et turpis mollis, dignissim orci eget, pellentesque mi. Aliquam ullamcorper tellus diam, at porttitor sem malesuada sit amet. Sed ac ante vel diam convallis luctus vel ut arcu. In egestas iaculis ex vitae hendrerit.
+\n\nVivamus ornare egestas scelerisque. Quisque mollis dictum quam vitae bibendum. Nullam vitae elit eget ex pulvinar convallis. Sed nec sollicitudin felis, in tempor sapien. Ut sagittis fringilla metus, nec rutrum dolor mollis tempus. In id ligula eleifend, semper odio a, mollis sem. Fusce ac dolor bibendum, blandit velit non, laoreet magna. Ut leo turpis, molestie sit amet suscipit in, commodo at enim. Nunc et turpis mollis, dignissim orci eget, pellentesque mi. Aliquam ullamcorper tellus diam, at porttitor sem malesuada sit amet. Sed ac ante vel diam convallis luctus vel ut arcu. In egestas iaculis ex vitae hendrerit.
+\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVivamus ornare egestas scelerisque. Quisque mollis dictum quam vitae bibendum. Nullam vitae elit eget ex pulvinar convallis. Sed nec sollicitudin felis, in tempor sapien. Ut sagittis fringilla metus, nec rutrum dolor mollis tempus. In id ligula eleifend, semper odio a, mollis sem. Fusce ac dolor bibendum, blandit velit non, laoreet magna. Ut leo turpis, molestie sit amet suscipit in, commodo at enim. Nunc et turpis mollis, dignissim orci eget, pellentesque mi. Aliquam ullamcorper tellus diam, at porttitor sem malesuada sit amet. Sed ac ante vel diam convallis luctus vel ut arcu. In egestas iaculis ex vitae hendrerit.
+	</string>
+	
+	<!--about-->
+	<string name="about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+		
+Sed varius dui et orci accumsan, et rutrum mauris dictum. Sed id ante vitae diam ornare eleifend quis eget ligula.
+	</string>
+	
 	
 </resources>

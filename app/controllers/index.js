@@ -37,7 +37,6 @@ function isValidCPR( cpr ) {
 function cprValidated( valid ) {
 	
 	//hide activity indicator
-	/*
 	Alloy.Globals.activityIndicatorWnd.hide();
 	
 	//check if valid
@@ -47,7 +46,6 @@ function cprValidated( valid ) {
 		$.cpr_number.focus();
 		alert(L('insert_valid_cpr'));
 	};
-	*/
 	
 };
 
@@ -114,6 +112,8 @@ function doSubmit() {
 $.index.addEventListener("open", function(evt) { 
 	//set action bar
 	Alloy.Globals.setActionBar( $.index );
+	
+	Alloy.Globals.showHelp( { parent: $.index } );
 });
 
 $.index.open();
