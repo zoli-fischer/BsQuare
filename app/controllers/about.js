@@ -1,6 +1,6 @@
 var args = arguments[0] || {};
 	self = this,
-	view = this.getView();
+	view = self.getView();
 
 //on window open
 view.addEventListener("open",function(event) {

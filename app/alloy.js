@@ -35,7 +35,7 @@ Alloy.Globals.activityIndicatorWnd = (function() {
 		self.activityIndicatorWin = Ti.UI.createWindow({
 	 		backgroundColor: 'white',
 	 		fullscreen: false,
-		    modal: false
+		    modal: true
 		});
 	
 		//set up activity indicator
@@ -101,7 +101,8 @@ Alloy.Globals.activityIndicatorWnd = (function() {
 })();
 
 //set up window action bar
-Alloy.Globals.setActionBar = function( view, showBack, showMenu ) {	
+Alloy.Globals.setActionBar = function( controller, showBack, showMenu ) {
+	var view = controller.getView();	
 	if ( Ti.Platform.name === "android" && view && view.activity ) {
 		var actionBar = view.activity.actionBar;
 		
@@ -111,13 +112,14 @@ Alloy.Globals.setActionBar = function( view, showBack, showMenu ) {
 		//get showMenu value
 		showMenu = typeof showMenu === 'undefined' ? true : showMenu;
 		
+		
 		if ( showBack ) {
 			//show back button
 			actionBar.setDisplayHomeAsUp(true);
 			
 			//go back
 			actionBar.onHomeIconItemSelected = function() {
-			    Ti.Android.currentActivity.finish();
+			    view.fireEvent("android:back");
 			};
 		};
 		
@@ -136,7 +138,7 @@ Alloy.Globals.setActionBar = function( view, showBack, showMenu ) {
 					showAsAction : Ti.Android.SHOW_AS_ACTION_WITH_TEXT 
 				});
 				menuItemHelp.addEventListener("click", function(e) { 
-					Alloy.Globals.showHelp( { parent: view } ); 
+					Alloy.Globals.showHelp(); 
 				}); 
 				
 				var menuItemAbout = e.menu.add({ 
@@ -145,7 +147,7 @@ Alloy.Globals.setActionBar = function( view, showBack, showMenu ) {
 					showAsAction : Ti.Android.SHOW_AS_ACTION_WITH_TEXT 
 				});
 				menuItemAbout.addEventListener("click", function(e) { 
-					alert(L('menu_about')); 
+					Alloy.Globals.showAbout();
 				}); 
 			};
 		};
@@ -153,8 +155,26 @@ Alloy.Globals.setActionBar = function( view, showBack, showMenu ) {
 	};
 };
 
+
+/*
+ * Parameter to open view
+ * { parent: view }
+ */
+
+//show help window
+Alloy.Globals.showAbout = function( opts ) {
+	//create about controller and open view
+	Alloy.createController("about", opts).getView().open({ modal: true });
+};
+
 //show help window
 Alloy.Globals.showHelp = function( opts ) {
 	//create help controller and open view
-	Alloy.createController("help", opts).getView().open();
+	Alloy.createController("help", opts).getView().open({ modal: true });
+};
+
+//show start window
+Alloy.Globals.showStart = function( opts ) {
+	//create start controller and open view
+	Alloy.createController("start", opts).getView().open({ modal: false });
 };

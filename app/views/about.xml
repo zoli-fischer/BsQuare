@@ -1,0 +1,8 @@
+<Alloy>
+	<Window>
+		<ScrollView showVerticalScrollIndicator="true" showHorizontalScrollIndicator="false">
+			<Label class="title">L('menu_about')</Label>
+			<Label class="content">L('about_text')</Label>	
+		</ScrollView>
+	</Window>
+</Alloy>

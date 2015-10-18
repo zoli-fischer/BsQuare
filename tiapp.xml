@@ -43,7 +43,16 @@
             </dict>
         </plist>
     </ios>
-    <android xmlns:android="http://schemas.android.com/apk/res/android"/>
+    <android xmlns:android="http://schemas.android.com/apk/res/android">
+        <manifest>
+            <application>
+                <activity android:name="org.appcelerator.titanium.TiActivity" 
+                    android:screenOrientation="portrait" 
+                    android:configChanges="orientation">
+                </activity>
+            </application>
+        </manifest>
+    </android>
     <mobileweb>
         <precache/>
         <splash>

@@ -22,9 +22,21 @@ Vivamus ornare egestas scelerisque. Quisque mollis dictum quam vitae bibendum. N
 	</string>
 	
 	<!--about-->
-	<string name="about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-		
-Sed varius dui et orci accumsan, et rutrum mauris dictum. Sed id ante vitae diam ornare eleifend quis eget ligula.
+	<string name="about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+\n\nSed varius dui et orci accumsan, et rutrum mauris dictum. Sed id ante vitae diam ornare eleifend quis eget ligula.
 	</string>
+	
+	<!--start-->
+	<string name="start_text">\n\nWelcome to BSquare Hearing Test App.
+\n\nPlease read the following tinstructions on how to use this app.
+\n
+\n\n1. xxxxxxxxx
+\n\n2. xxxxxxxxx
+\n\n3. xxxxxxxxx
+\n\n
+\nThank you for your participation. Please press start to proceed.
+\n\n
+	</string>
+	<string name="btn_start">Start</string>
 	
 </resources>

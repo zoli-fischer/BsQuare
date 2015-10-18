@@ -1,3 +1,7 @@
+var args = arguments[0] || {};
+	self = this,
+	view = this.getView();
+	
 //Check if string is valid cpr number
 function isValidCPR( cpr ) {
 	if ( typeof cpr != 'string' )
@@ -36,13 +40,19 @@ function isValidCPR( cpr ) {
 //continue with cpr valid or not
 function cprValidated( valid ) {
 	
-	//hide activity indicator
-	Alloy.Globals.activityIndicatorWnd.hide();
-	
 	//check if valid
 	if ( valid ) {
-		alert('CPR number is valid.');
+		
+		//show start
+		Alloy.Globals.showStart( { parent: self } );
+		
+		//hide activity indicator
+		Alloy.Globals.activityIndicatorWnd.hide();
+	
 	} else {
+		//hide activity indicator
+		Alloy.Globals.activityIndicatorWnd.hide();
+	
 		$.cpr_number.focus();
 		alert(L('insert_valid_cpr'));
 	};
@@ -111,9 +121,7 @@ function doSubmit() {
 //on window open
 $.index.addEventListener("open", function(evt) { 
 	//set action bar
-	Alloy.Globals.setActionBar( $.index );
-	
-	Alloy.Globals.showHelp( { parent: $.index } );
+	Alloy.Globals.setActionBar( self );
 });
 
 $.index.open();

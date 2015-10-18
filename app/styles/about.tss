@@ -1,0 +1,31 @@
+"ScrollableView": {
+	backgroundColor: "red",
+	top: "0dp",
+	left: "0dp",
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	layout: "vertical"
+}
+
+".content": {
+	top: "40dp",
+	left: "10dp",
+	right: "10dp",
+	color: "#000",
+	textAlign: 'left',
+	font: {
+        fontSize: '16dp'
+    }
+}
+
+".title": {
+	top: "10dp",
+	left: "10dp",
+	right: "10dp",
+	height: "30dp",
+	color: "#000",
+	textAlign: 'left',
+	font: {
+        fontSize: '24dp'    
+    }
+}
