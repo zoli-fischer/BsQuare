@@ -1,0 +1,7 @@
+<Alloy>
+	<Window title="L('test_history_title')" exitOnClose="false" modal="true">
+		<ScrollView showVerticalScrollIndicator="true" showHorizontalScrollIndicator="false">
+			<Label class="content">L('test_history_text')</Label>	
+		</ScrollView>
+	</Window>
+</Alloy>

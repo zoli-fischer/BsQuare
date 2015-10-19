@@ -1,0 +1,8 @@
+<Alloy>
+	<Window title="L('intruction_title')" exitOnClose="false" modal="true">
+		<ScrollView showVerticalScrollIndicator="true" showHorizontalScrollIndicator="false">
+			<Label class="content">L('intruction_text')</Label>	
+		</ScrollView>
+		<Button id="start_test" titleid="intruction_btn_start" onClick="doStart"></Button>
+	</Window>
+</Alloy>

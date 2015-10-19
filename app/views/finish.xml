@@ -1,0 +1,9 @@
+<Alloy>
+	<Window title="L('finish_title')" exitOnClose="false" modal="false">
+		<ScrollView showVerticalScrollIndicator="true" showHorizontalScrollIndicator="false">
+			<Label class="content">L('finish_text')</Label>	
+		</ScrollView>
+		<Button id="btn_done" titleid="finish_btn_done" onClick="doDone"></Button>
+		<Button id="btn_restart" titleid="finish_btn_restart" onClick="doRestart"></Button>
+	</Window>
+</Alloy>

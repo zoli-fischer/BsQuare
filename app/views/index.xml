@@ -1,5 +1,5 @@
 <Alloy>
-	<Window>
+	<Window title="L('title_login')" exitOnClose="true" modal="false">
 		<View>
 			<ImageView id="image" image="/images/logo.jpg" />
 			<Label>L('enter_cpr')</Label>

@@ -11,6 +11,8 @@
 	top: "0dp",
 	left: "10dp",
 	right: "10dp",
+	height: "30dp",
+	width: Ti.UI.SIZE,
 	color: "#000",
 	textAlign: 'left',
 	font: {
@@ -19,6 +21,8 @@
 }
 
 "Button": {
+	height: "auto",
+	top: "auto",
 	width: '120dp',
 	fontWeight: 'bold',
 	fontSize: '16pt',
@@ -28,4 +32,16 @@
 	borderRadius: '0dp',
 	borderColor: '#000000',
 	borderWidth: '0.5dp'
+}
+
+"#start_test": {
+	top: "40dp"
+}
+
+"#start_history": {
+	top: "85dp"
+}
+
+"#start_logout": {
+	top: "130dp"
 }

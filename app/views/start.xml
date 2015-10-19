@@ -1,8 +1,0 @@
-<Alloy>
-	<Window>
-		<ScrollView showVerticalScrollIndicator="true" showHorizontalScrollIndicator="false">
-			<Label class="content">L('start_text')</Label>
-			<Button titleid="btn_start"></Button>
-		</ScrollView>
-	</Window>
-</Alloy>

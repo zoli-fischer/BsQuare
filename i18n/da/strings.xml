@@ -5,9 +5,10 @@
 	<string name="app_loading">Vent venligst...</string>
 	
 	<!--index-->
+	<string name="title_login">Login</string>
 	<string name="insert_valid_cpr">Indsæt et gyldigt CPR-nummer.</string>	
 	<string name="enter_cpr">Indtast dit CPR-nummer</string>
-	<string name="btn_login">Fortsætte</string>	
+	<string name="btn_login">Fortsætte</string>
 	
 	<!--menu-->
 	<string name="menu_help">Hjælp</string>
@@ -26,18 +27,43 @@
 \n\nSed varius dui et orci accumsan, et rutrum mauris dictum. Sed id ante vitae diam ornare eleifend quis eget ligula.
 	</string>
 	
+	<!--main-->
+	<string name="title_main">Main Screen</string>
+	<string name="main_text">Velkommen %s</string>
+	<string name="btn_logout">Log out</string>
+	<string name="btn_start_test">Start test</string>
+	<string name="btn_test_history">Test history</string>
 	
-	<!--start-->
-	<string name="start_text">\n\nWelcome to BSquare Hearing Test App.
-\n\nPlease read the following tinstructions on how to use this app.
-\n
-\n\n1. xxxxxxxxx
-\n\n2. xxxxxxxxx
-\n\n3. xxxxxxxxx
-\n\n
-\nThank you for your participation. Please press start to proceed.
-\n\n
+	<!--test_history-->
+	<string name="test_history_title">Test history</string>
+	<string name="test_history_text">Test histroy data
+\n\nNr.      Date      Status
 	</string>
-	<string name="btn_start">Start</string>
+	
+	<!--intruction-->
+	<string name="intruction_title">Intsruction</string>
+	<string name="intruction_text">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+\n\n2. Sed varius dui et orci accumsan, et rutrum mauris dictum. 
+\n\n3. Sed id ante vitae diam ornare eleifend quis eget ligula. 
+	</string>
+	<string name="intruction_btn_start">Start test</string>
+	
+	<!--test-->
+	<string name="test_title">Test</string>
+	<string name="test_text">Test %s\n\nDo you here the sound?</string>
+	<string name="test_yes">Yes</string>
+	<string name="test_no">No</string>
+	<string name="test_stop">Stop</string>
 
+	<string name="test_confirmation_yes">Yes</string>
+	<string name="test_confirmation_no">No</string>
+	<string name="test_confirmation_title">Confirmation</string>
+	<string name="test_confirmation_text">Are you sure you want to stop the test?</string>
+	
+	<!--finish-->
+	<string name="finish_title">Finished</string>
+	<string name="finish_text">Thank you, the test is finished.</string>
+	<string name="finish_btn_done">Done</string>
+	<string name="finish_btn_restart">Re-start test</string>
+	
 </resources>

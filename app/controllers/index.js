@@ -43,8 +43,10 @@ function cprValidated( valid ) {
 	//check if valid
 	if ( valid ) {
 		
+		Alloy.Globals.user.cpr( $.cpr_number.value );
+		
 		//show start
-		Alloy.Globals.showStart( { parent: self } );
+		Alloy.Globals.showMain( { parent: self } );
 		
 		//hide activity indicator
 		Alloy.Globals.activityIndicatorWnd.hide();
@@ -119,9 +121,19 @@ function doSubmit() {
 };
 
 //on window open
-$.index.addEventListener("open", function(evt) { 
+view.addEventListener("open", function(evt) { 
 	//set action bar
 	Alloy.Globals.setActionBar( self );
+	
+	//close opener
+	if ( self.parent )
+		self.parent.getView().close();
 });
 
-$.index.open();
+//check if user logged
+if ( Alloy.Globals.user.is() ) {
+	//show start
+	Alloy.Globals.showMain();
+} else {
+	view.open();
+}
