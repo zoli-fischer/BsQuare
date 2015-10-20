@@ -1,43 +1,12 @@
-"ScrollableView": {
-	backgroundColor: "red",
-	top: "0dp",
-	left: "0dp",
-	width: Ti.UI.SIZE,
-	height: Ti.UI.SIZE,
-	layout: "vertical"
-}
-
 ".content": {
-	top: "0dp",
-	left: "10dp",
-	right: "10dp",
-	height: "30dp",
-	width: Ti.UI.SIZE,
-	color: "#000",
-	textAlign: 'left',
-	font: {
-        fontSize: '16dp'
-    }
-}
-
-"Button": {
-	height: "auto",
-	top: "auto",
-	width: '120dp',
-	fontWeight: 'bold',
-	fontSize: '16pt',
-	height: '30dp',
-	backgroundColor: '#333333',
-	color: "#fff",
-	borderRadius: '0dp',
-	borderColor: '#000000',
-	borderWidth: '0.5dp'
+	top: "40px",
+	textAlign: "center"
 }
 
 "#btn_done": {
-	top: "40dp"
+	top: "90px"
 }
 
 "#btn_restart": {
-	top: "85dp"
+	top: "150px"
 }

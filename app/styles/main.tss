@@ -1,47 +1,19 @@
-"ScrollableView": {
-	backgroundColor: "red",
-	top: "0dp",
-	left: "0dp",
-	width: Ti.UI.SIZE,
-	height: Ti.UI.SIZE,
-	layout: "vertical"
-}
-
 ".content": {
-	top: "0dp",
-	left: "10dp",
-	right: "10dp",
-	height: "30dp",
-	width: Ti.UI.SIZE,
-	color: "#000",
-	textAlign: 'left',
-	font: {
-        fontSize: '16dp'
-    }
-}
-
-"Button": {
-	height: "auto",
-	top: "auto",
-	width: '120dp',
-	fontWeight: 'bold',
-	fontSize: '16pt',
-	height: '30dp',
-	backgroundColor: '#333333',
-	color: "#fff",
-	borderRadius: '0dp',
-	borderColor: '#000000',
-	borderWidth: '0.5dp'
+	top: "40px"
 }
 
 "#start_test": {
-	top: "40dp"
+	top: "70px"
 }
 
 "#start_history": {
-	top: "85dp"
+	top: "140px"
 }
 
 "#start_logout": {
-	top: "130dp"
+	bottom: "20px"
+}
+
+".content": {
+	textAlign: 'center'
 }

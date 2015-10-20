@@ -5,7 +5,7 @@
 	<string name="app_loading">Vent venligst...</string>
 	
 	<!--index-->
-	<string name="title_login">Login</string>
+	<string name="title_login">Log ind</string>
 	<string name="insert_valid_cpr">Indsæt et gyldigt CPR-nummer.</string>	
 	<string name="enter_cpr">Indtast dit CPR-nummer</string>
 	<string name="btn_login">Fortsætte</string>
@@ -15,55 +15,52 @@
 	<string name="menu_about">Om app</string>
 	
 	<!--help-->
-	<string name="help_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-\n\nSed varius dui et orci accumsan, et rutrum mauris dictum. Sed id ante vitae diam ornare eleifend quis eget ligula. 
-\n\nVivamus ornare egestas scelerisque. Quisque mollis dictum quam vitae bibendum. Nullam vitae elit eget ex pulvinar convallis. Sed nec sollicitudin felis, in tempor sapien. Ut sagittis fringilla metus, nec rutrum dolor mollis tempus. In id ligula eleifend, semper odio a, mollis sem. Fusce ac dolor bibendum, blandit velit non, laoreet magna. Ut leo turpis, molestie sit amet suscipit in, commodo at enim. Nunc et turpis mollis, dignissim orci eget, pellentesque mi. Aliquam ullamcorper tellus diam, at porttitor sem malesuada sit amet. Sed ac ante vel diam convallis luctus vel ut arcu. In egestas iaculis ex vitae hendrerit.
-\n\nVivamus ornare egestas scelerisque. Quisque mollis dictum quam vitae bibendum. Nullam vitae elit eget ex pulvinar convallis. Sed nec sollicitudin felis, in tempor sapien. Ut sagittis fringilla metus, nec rutrum dolor mollis tempus. In id ligula eleifend, semper odio a, mollis sem. Fusce ac dolor bibendum, blandit velit non, laoreet magna. Ut leo turpis, molestie sit amet suscipit in, commodo at enim. Nunc et turpis mollis, dignissim orci eget, pellentesque mi. Aliquam ullamcorper tellus diam, at porttitor sem malesuada sit amet. Sed ac ante vel diam convallis luctus vel ut arcu. In egestas iaculis ex vitae hendrerit.
-\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVivamus ornare egestas scelerisque. Quisque mollis dictum quam vitae bibendum. Nullam vitae elit eget ex pulvinar convallis. Sed nec sollicitudin felis, in tempor sapien. Ut sagittis fringilla metus, nec rutrum dolor mollis tempus. In id ligula eleifend, semper odio a, mollis sem. Fusce ac dolor bibendum, blandit velit non, laoreet magna. Ut leo turpis, molestie sit amet suscipit in, commodo at enim. Nunc et turpis mollis, dignissim orci eget, pellentesque mi. Aliquam ullamcorper tellus diam, at porttitor sem malesuada sit amet. Sed ac ante vel diam convallis luctus vel ut arcu. In egestas iaculis ex vitae hendrerit.
-	</string>
+	<string name="help_text">Første side indeholder 3 valg, BEGYND TEST, HISTORIK og FÆRDIG. BEGYND TEST vil starte testen. HISTORIK vil vise tidligere forsøg og FÆRDIG vil afslutte testen.
+\n\nFølge de online instruks. Der vises en JA og NEJ valg. Lyden bliver afspilt i 3 sekunder. Tryk på JA hvis du hører det og NEJ hvis ikke du kan tyde en lyd. PAUSE skal kun trykkes hvis du vil midlertidigt afbryde testen. Ved AFBRYD få du ydeligere 2 muligheder FORTSÆTTE eller AFBRYD TESTEN. 
+\n\nNår testen er gennemført for du et valg om at SEND RESULTAT eller at GENSTART TESTEN.
+\nSEND RESULTAT vil oploaded resultatet til syghuset og GENSTART TESTEN vil begynd testen forfra.</string>
 	
 	<!--about-->
-	<string name="about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-\n\nSed varius dui et orci accumsan, et rutrum mauris dictum. Sed id ante vitae diam ornare eleifend quis eget ligula.
-	</string>
+	<string name="about_text">BSquare Hearing Test
+\n\nBeskrivelse: Portable hearing test.
+\n\nApp opretet af Arturs, Daniel, Florin, Michelle, Zoltan</string>
 	
 	<!--main-->
-	<string name="title_main">Main Screen</string>
+	<string name="title_main">Hoved skærm</string>
 	<string name="main_text">Velkommen %s</string>
-	<string name="btn_logout">Log out</string>
-	<string name="btn_start_test">Start test</string>
-	<string name="btn_test_history">Test history</string>
+	<string name="btn_logout">Log ud</string>
+	<string name="btn_start_test">Start hørelsetest</string>
+	<string name="btn_test_history">Hørelsetest historik</string>
 	
 	<!--test_history-->
-	<string name="test_history_title">Test history</string>
-	<string name="test_history_text">Test histroy data
+	<string name="test_history_title">Hørelsetest historik</string>
+	<string name="test_history_text">Hørelsetest historik data
 \n\nNr.      Date      Status
 	</string>
 	
 	<!--intruction-->
-	<string name="intruction_title">Intsruction</string>
-	<string name="intruction_text">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-\n\n2. Sed varius dui et orci accumsan, et rutrum mauris dictum. 
-\n\n3. Sed id ante vitae diam ornare eleifend quis eget ligula. 
-	</string>
-	<string name="intruction_btn_start">Start test</string>
+	<string name="intruction_title">Instruks</string>
+	<string name="intruction_text">Velkommen til BeSquare Hørelsestest. Denne mobilapp er rettet mod forskellige alder gruppe, afhængig af dit CPR nummer. Det primære mål er at forbedre oplevelsen of effektivitet for både patienten og syghuset.
+\n\nTesten er lavet for at gengive en præcis måling af din hørelse. Derfor er det vigtigt at du slappe af og besvarer testen på en ærlig og pålidelig måde.
+\n\nVi takke for din støtte.!</string>
+	<string name="intruction_btn_start">Start hørelsetest</string>
 	
 	<!--test-->
-	<string name="test_title">Test</string>
-	<string name="test_text">Test %s\n\nDo you here the sound?</string>
-	<string name="test_yes">Yes</string>
-	<string name="test_no">No</string>
-	<string name="test_stop">Stop</string>
+	<string name="test_title">Hørelsetest %s</string>
+	<string name="test_text">Kan du hører lyden?</string>
+	<string name="test_yes">Ja</string>
+	<string name="test_no">Nej</string>
+	<string name="test_stop">Afbryd hørelsetest</string>
 
-	<string name="test_confirmation_yes">Yes</string>
-	<string name="test_confirmation_no">No</string>
-	<string name="test_confirmation_title">Confirmation</string>
-	<string name="test_confirmation_text">Are you sure you want to stop the test?</string>
+	<string name="test_confirmation_yes">Ja</string>
+	<string name="test_confirmation_no">Nej</string>
+	<string name="test_confirmation_title">Bekræftelse</string>
+	<string name="test_confirmation_text">Er du sikker på, at du vil afbryd hørelsetest?</string>
 	
 	<!--finish-->
-	<string name="finish_title">Finished</string>
-	<string name="finish_text">Thank you, the test is finished.</string>
-	<string name="finish_btn_done">Done</string>
-	<string name="finish_btn_restart">Re-start test</string>
+	<string name="finish_title">Færdi</string>
+	<string name="finish_text">Tak, hørelsetesten er færdig.</string>
+	<string name="finish_btn_done">OK</string>
+	<string name="finish_btn_restart">Gen starte</string>
 	
 </resources>

@@ -5,7 +5,7 @@
 	<string name="app_loading">Please wait...</string>
 	
 	<!--index-->
-	<string name="title_login">Log ind</string>
+	<string name="title_login">Login</string>
 	<string name="insert_valid_cpr">Please insert a valid CPR number.</string>
 	<string name="enter_cpr">Enter your CPR-number</string>
 	<string name="btn_login">Continue</string>
@@ -15,56 +15,53 @@
 	<string name="menu_about">About app</string>
 	
 	<!--help-->
-	<string name="help_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-		
-Sed varius dui et orci accumsan, et rutrum mauris dictum. Sed id ante vitae diam ornare eleifend quis eget ligula. 
-
-Vivamus ornare egestas scelerisque. Quisque mollis dictum quam vitae bibendum. Nullam vitae elit eget ex pulvinar convallis. Sed nec sollicitudin felis, in tempor sapien. Ut sagittis fringilla metus, nec rutrum dolor mollis tempus. In id ligula eleifend, semper odio a, mollis sem. Fusce ac dolor bibendum, blandit velit non, laoreet magna. Ut leo turpis, molestie sit amet suscipit in, commodo at enim. Nunc et turpis mollis, dignissim orci eget, pellentesque mi. Aliquam ullamcorper tellus diam, at porttitor sem malesuada sit amet. Sed ac ante vel diam convallis luctus vel ut arcu. In egestas iaculis ex vitae hendrerit.
-	</string>
+	<string name="help_text">The opening page contains 3 options, START TEST, TEST HISTORY and LOGOUT. START TEST begins the test. TEST HISTORY will show previous attempts. LOGOUT will end the test.
+\n\nFollow the onscreen instructions. You are shown a YES and NO option. The sound will play for 3 seconds. Press YES if you hear the sound and NO if you dont. PAUSE should be used if for any reason you need to delay the test. If PAUSE is chosen then the option to CONTINUE and CANCEL are made available.
+\n\nOnce the test is completed you can choose the option to SEND RESULTS or RESTART the test.
+</string>
 	
 	<!--about-->
-	<string name="about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-\n\nSed varius dui et orci accumsan, et rutrum mauris dictum. Sed id ante vitae diam ornare eleifend quis eget ligula.
-	</string>
+	<string name="about_text">BSquare Hearing Test
+\n\nDescription: Portable hearing test.
+\n\nApp created by Arturs, Daniel, Florin, Michelle, Zoltan</string>
 	
 	<!--main-->
 	<string name="title_main">Main Screen</string>
 	<string name="main_text">Welcome %s</string>
 	<string name="btn_logout">Log out</string>
-	<string name="btn_start_test">Start test</string>
-	<string name="btn_test_history">Test history</string>
+	<string name="btn_start_test">Start hearing test</string>
+	<string name="btn_test_history">Hearing test history</string>
 	
 	<!--test_history-->
-	<string name="test_history_title">Test history</string>
-	<string name="test_history_text">Test histroy data
+	<string name="test_history_title">Hearing test history</string>
+	<string name="test_history_text">Hearing test history data
 \n\nNr.      Date      Status
 	</string>
 	
 	<!--intruction-->
 	<string name="intruction_title">Intsruction</string>
-	<string name="intruction_text">1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-\n\n2. Sed varius dui et orci accumsan, et rutrum mauris dictum. 
-\n\n3. Sed id ante vitae diam ornare eleifend quis eget ligula. 
-	</string>
-	<string name="intruction_btn_start">Start test</string>
+	<string name="intruction_text">Welcome to the BeSquare hearing test. This app contains a portable hearing test designed for various age groups dependant on your entered CPR number. Its aim is to improve the efficency and easy of use for both the patient and hospital. 
+\n\nThe tests are designed to give an accurate hearing measurement, but the measurements are only as reliable as the responses given. Therefore you are asked to take your time and respond to the sounds as honestly and accurately as possible. 
+\n\nThank you for your valued support.</string>
+	<string name="intruction_btn_start">Start hearing test</string>
 	
 	<!--test-->
-	<string name="test_title">Test</string>
-	<string name="test_text">Test %s\n\nDo you here the sound?</string>
-	<string name="test_yes">Ja</string>
-	<string name="test_no">Nej</string>
-	<string name="test_stop">Stop</string>
+	<string name="test_title">Hearing test %s</string>
+	<string name="test_text">Can you here the sound?</string>
+	<string name="test_yes">Yes</string>
+	<string name="test_no">No</string>
+	<string name="test_stop">Stop hearing test</string>
 	
-	<string name="test_confirmation_yes">Ja</string>
-	<string name="test_confirmation_no">Nej</string>
+	<string name="test_confirmation_yes">Yes</string>
+	<string name="test_confirmation_no">No</string>
 	<string name="test_confirmation_title">Confirmation</string>
-	<string name="test_confirmation_text">Are you sure you want to stop the test?</string>
+	<string name="test_confirmation_text">Are you sure you want to stop the hearing test?</string>
 	
 	<!--finish-->
 	<string name="finish_title">Finished</string>
-	<string name="finish_text">Thank you, the test is finished.</string>
-	<string name="finish_btn_done">Done</string>
-	<string name="finish_btn_restart">Re-start test</string>
+	<string name="finish_text">Thank you, the hearing test is finished.</string>
+	<string name="finish_btn_done">OK</string>
+	<string name="finish_btn_restart">Re-start</string>
 	
 	
 </resources>

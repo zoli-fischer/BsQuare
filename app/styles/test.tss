@@ -1,47 +1,41 @@
-"ScrollableView": {
-	backgroundColor: "red",
-	top: "0dp",
-	left: "0dp",
-	width: Ti.UI.SIZE,
-	height: Ti.UI.SIZE,
-	layout: "vertical"
+"ImageView": {
+	top: "10px",
+	width: "80%"
 }
 
-".content": {
-	top: "0dp",
-	left: "10dp",
-	right: "10dp",
-	height: "30dp",
-	width: Ti.UI.SIZE,
-	color: "#000",
-	textAlign: 'left',
+"#content": {
 	font: {
-        fontSize: '16dp'
-    }
+		fontSize: "32px",
+	},
+	textAlign: "center",
+	top: "20px",
 }
 
-"Button": {
-	height: "auto",
-	top: "auto",
-	width: '120dp',
-	fontWeight: 'bold',
-	fontSize: '16pt',
-	height: '30dp',
-	backgroundColor: '#333333',
-	color: "#fff",
-	borderRadius: '0dp',
-	borderColor: '#000000',
-	borderWidth: '0.5dp'
+"ImageView": {
+	top: "70px",
+	width: "auto",
+	height: "240px"
+}
+
+"#question": {
+	font: {
+		fontSize: "20px",
+	},
+	textAlign: "center",
+	top: "320px",
 }
 
 "#btn_yes": {
-	top: "40dp"
+	backgroundColor: "#7fe3c2",
+	bottom: "180px"
 }
 
 "#btn_no": {
-	top: "85dp"
+	backgroundColor: "#f88cae",
+	bottom: "120px"
 }
 
 "#btn_stop": {
-	top: "130dp"
+	bottom: "20px",
+	width: "220px"
 }

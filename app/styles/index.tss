@@ -1,34 +1,26 @@
 "View": {
-	width: Ti.UI.FILL,
-	height: "auto",
 	layout:"vertical"
 }
 
+"ImageView": {
+	top: "50px",
+	height: "220px"
+}
+
 "Label": {
-	width: '180dp',
-	top: "20dp",
-	color: "#000",
+	top: "20px",
 	textAlign: 'center'
 }
 
 "TextField": {
-	fontSize: '16pt',
-	width: '180dp',
-	color: "#000",	
-	borderRadius: '0dp',
-	borderColor: '#bbbbbb',
-	borderWidth: '0.5dp'
+	width: '200px',
+	top: "20px"
 }
 
-"Button": {
-	width: '120dp',
-	fontWeight: 'bold',
-	fontSize: '16pt',
-	height: '30dp',
-	backgroundColor: '#333333',
-	color: "#fff",
-	top: "20dp",
-	borderRadius: '0dp',
-	borderColor: '#000000',
-	borderWidth: '0.5dp'
+"#login": {
+	top: "20px",
+}
+
+".smallButton": {
+	top: "20px",
 }

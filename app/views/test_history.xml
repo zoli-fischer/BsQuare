@@ -1,7 +1,13 @@
 <Alloy>
 	<Window title="L('test_history_title')" exitOnClose="false" modal="true">
-		<ScrollView showVerticalScrollIndicator="true" showHorizontalScrollIndicator="false">
-			<Label class="content">L('test_history_text')</Label>	
+		<ScrollView class="innerView" showVerticalScrollIndicator="true" showHorizontalScrollIndicator="false">
+			<ListView id="list">
+		        <ListSection>
+		            <ListItem title="08.10.2015 14:25">08.10.2015 14:25</ListItem>
+		            <ListItem title="04.10.2015 16:53">04.10.2015 16:53</ListItem>
+		            <ListItem title="04.10.2015 09:12">04.10.2015 09:12</ListItem>
+		        </ListSection>
+		    </ListView>   	
 		</ScrollView>
 	</Window>
 </Alloy>

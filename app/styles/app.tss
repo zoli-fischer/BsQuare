@@ -26,5 +26,73 @@ overrode the settings with other TSS, XML, or JS settings:
 */
 
 "Window": {
-	backgroundColor:"white"
+	backgroundColor: "#00b9ed"
+}
+
+".innerView": {
+	backgroundColor: "#ffffff",
+	left: "20px",
+	top: "20px",
+	bottom: "20px",
+	right: "20px"
+}
+
+"ListItem": {
+	font: {
+        fontSize: '18px'
+    },
+    color: "#000"
+}
+
+"Label": {
+	font: {
+        fontSize: '18px'
+    },
+    color: "#000"
+}
+
+".content": {
+	top: "20px",
+	left: "20px",
+	right: "20px",
+	textAlign: 'left'
+}
+
+"TextField": {
+	font: {
+        fontSize: '18px'
+    },
+	color: "#000",	
+	borderRadius: '0px',
+	borderColor: '#ffffff',
+	borderWidth: '1px'
+}
+
+"Button": {
+	width: '300px',
+	font: {
+        fontSize: '24px',
+		fontWeight: 'bold'
+    },
+	height: '48px',
+	backgroundColor: '#0B74D6',
+	color: "#fff",
+	borderRadius: '0px',
+	borderColor: '#000000',
+	borderWidth: '0px',
+	"shadow": {
+	    shadowRadius: 10,
+	    shadowOpacity: 0.5,
+	    shadowOffset: { x:5, y:10 }
+	}
+}
+
+".smallButton": {
+	width: '140px',
+	font: {
+        fontSize: '20px',
+		fontWeight: 'bold'
+    },
+	height: '36px',
+	backgroundColor: '#538ed3',
 }

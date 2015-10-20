@@ -120,6 +120,11 @@ function doSubmit() {
 	}
 };
 
+//show help
+function showHelp() {
+	Alloy.Globals.showHelp( { parent: self } );
+};
+
 //on window open
 view.addEventListener("open", function(evt) { 
 	//set action bar

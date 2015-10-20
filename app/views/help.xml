@@ -1,6 +1,6 @@
 <Alloy>
 	<Window title="L('menu_help')" exitOnClose="false" modal="true">
-		<ScrollView showVerticalScrollIndicator="true" showHorizontalScrollIndicator="false">
+		<ScrollView class="innerView" showVerticalScrollIndicator="true" showHorizontalScrollIndicator="false">
 			<Label class="content">L('help_text')</Label>	
 		</ScrollView>
 	</Window>
