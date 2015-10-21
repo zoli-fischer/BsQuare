@@ -1,7 +1,7 @@
 <Alloy>
 	<Window title="L('title_main')" exitOnClose="true" modal="false">
 		<ScrollView class="innerView" showVerticalScrollIndicator="true" showHorizontalScrollIndicator="false">
-			<Label id="content" class="content"></Label>
+			<Label id="content"></Label>
 			<Button id="start_test" titleid="btn_start_test" onClick="openInstruction"></Button>
 			<Button id="start_history" titleid="btn_test_history" onClick="openTestHistory"></Button>
 			<Button class="smallButton" id="start_logout" titleid="btn_logout" onClick="doLogout"></Button>

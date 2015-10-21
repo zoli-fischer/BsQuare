@@ -1,26 +1,20 @@
-"View": {
-	layout:"vertical"
-}
-
 "ImageView": {
-	top: "50px",
-	height: "220px"
+	height: "35%",
+	top: "15%"
 }
 
 "Label": {
-	top: "20px",
-	textAlign: 'center'
+	top: "20dp"
 }
 
 "TextField": {
-	width: '200px',
-	top: "20px"
+	top: "20dp"	
 }
 
 "#login": {
-	top: "20px",
+	top: "20dp"
 }
 
 ".smallButton": {
-	top: "20px",
+	top: "20dp"
 }

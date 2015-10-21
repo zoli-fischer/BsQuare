@@ -1,8 +1,8 @@
-"ScrollView": {
-	top: "0px"
+".innerView": {
+	layout: "composite",
 }
 
 "#start_test": {
-	top: "360px"
+	"width": "80%",
+	"bottom": "30dp"
 }
-

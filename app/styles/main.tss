@@ -1,17 +1,19 @@
-".content": {
-	top: "40px"
+"Label": {
+	top: "15%"
 }
 
 "#start_test": {
-	top: "70px"
+	width: "80%",
+	top: "40dp"
 }
 
 "#start_history": {
-	top: "140px"
+	width: "80%",
+	top: "20dp"
 }
 
 "#start_logout": {
-	bottom: "20px"
+	top: "40dp"
 }
 
 ".content": {

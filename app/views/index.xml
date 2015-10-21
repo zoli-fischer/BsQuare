@@ -1,11 +1,11 @@
 <Alloy>
 	<Window title="L('title_login')" exitOnClose="true" modal="false">
-		<View class="innerView">
+		<ScrollView class="innerView" showVerticalScrollIndicator="true" showHorizontalScrollIndicator="false">
 			<ImageView id="image" image="/images/logo.jpg" />
 			<Label>L('enter_cpr')</Label>
 			<TextField id="cpr_number" onReturn="doSubmit"></TextField>
 			<Button id="login" onClick="doSubmit" titleid="btn_login"></Button>
 			<Button class="smallButton" onClick="showHelp" titleid="menu_help"></Button>		
-		</View>
+		</ScrollView>
 	</Window>
 </Alloy>

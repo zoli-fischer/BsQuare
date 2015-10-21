@@ -31,73 +31,88 @@ overrode the settings with other TSS, XML, or JS settings:
 
 ".innerView": {
 	backgroundColor: "#ffffff",
-	left: "20px",
-	top: "20px",
-	bottom: "20px",
-	right: "20px"
+	left: "20dp",
+	top: "20dp",
+	bottom: "20dp",
+	right: "20dp",
+	layout: "vertical",
+	height: Ti.UI.FILL
 }
 
 "ListView": {
-	left: "20px",
-	top: "20px",
+	left: "20dp",
+	top: "20dp",
+	right: "20dp",
+	bottom: "20dp",
+	height: Ti.UI.FILL
+}
+
+"ListSection": {
+    width: Ti.UI.FILL
 }
 
 "ListItem": {
 	font: {
-        fontSize: '18px'
+        fontSize: "10pt"
     },
     color: "#000"
 }
 
 "Label": {
 	font: {
-        fontSize: '18px'
+        fontSize: "12pt"
     },
     color: "#000"
 }
 
 ".content": {
-	top: "20px",
-	left: "20px",
-	right: "20px",
-	textAlign: 'left'
+	font: {
+        fontSize: "12pt"
+    },
+    color: "#000",
+	left: "15dp",
+	right: "15dp",
+	top: "15dp",
+	bottom: "15dp",
+	textAlign: 'left',
+    verticalAlign: Ti.UI.TEXT_VERTICAL_ALIGNMENT_TOP
 }
 
 "TextField": {
+	width: "50%",
 	font: {
-        fontSize: '18px'
+        fontSize: "12pt"
     },
 	color: "#000",	
-	borderRadius: '0px',
+	borderRadius: 0,
 	borderColor: '#ffffff',
-	borderWidth: '1px'
+	borderWidth: 0
 }
 
+
 "Button": {
-	width: '300px',
+	width: "50%",
+	height: "22pt",
 	font: {
-        fontSize: '24px',
+        fontSize: "14pt",
 		fontWeight: 'bold'
     },
-	height: '48px',
 	backgroundColor: '#0B74D6',
 	color: "#fff",
-	borderRadius: '0px',
+	borderRadius: 0,
 	borderColor: '#000000',
-	borderWidth: '0px',
-	"shadow": {
-	    shadowRadius: 10,
-	    shadowOpacity: 0.5,
-	    shadowOffset: { x:5, y:10 }
-	}
+	borderWidth: 0,
+	shadowRadius: 10,
+	shadowOpacity: 0.5,
+	shadowOffset: { x:5, y:10 }
 }
 
 ".smallButton": {
-	width: '140px',
+	width: "40%",
+	height: "18pt",
 	font: {
-        fontSize: '20px',
+        fontSize: "12pt",
 		fontWeight: 'bold'
     },
-	height: '36px',
 	backgroundColor: '#538ed3',
 }
