@@ -2,6 +2,12 @@
 	layout: "composite",
 }
 
+/*
+".content": {
+	bottom: "50dp",
+}
+*/
+
 "#start_test": {
 	"width": "80%",
 	"bottom": "30dp"

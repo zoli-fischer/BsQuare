@@ -1,41 +1,35 @@
+"#content": {
+	font: {
+		fontSize: "12pt",
+	},
+	top: "10dp",
+}
+
 "ImageView": {
-	top: "10px",
-	width: "80%"
+	top: "10dp",
+	width: "70%"
 }
 
 "#content": {
 	font: {
-		fontSize: "32px",
+		fontWeight: "bold",
 	},
-	textAlign: "center",
-	top: "20px",
-}
-
-"ImageView": {
-	top: "70px",
-	width: "auto",
-	height: "240px"
-}
-
-"#question": {
-	font: {
-		fontSize: "20px",
-	},
-	textAlign: "center",
-	top: "320px",
+	top: "20dp",
 }
 
 "#btn_yes": {
+	width: "80%",
 	backgroundColor: "#7fe3c2",
-	bottom: "180px"
+	top: "20dp"
 }
 
 "#btn_no": {
+	width: "80%",
 	backgroundColor: "#f88cae",
-	bottom: "120px"
+	top: "20dp"
 }
 
 "#btn_stop": {
-	bottom: "20px",
-	width: "240px"
+	width: "70%",
+	top: "20dp"
 }

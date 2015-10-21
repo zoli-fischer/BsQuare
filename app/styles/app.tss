@@ -60,14 +60,14 @@ overrode the settings with other TSS, XML, or JS settings:
 
 "Label": {
 	font: {
-        fontSize: "12pt"
+        fontSize: "10pt"
     },
     color: "#000"
 }
 
 ".content": {
 	font: {
-        fontSize: "12pt"
+        fontSize: "10pt"
     },
     color: "#000",
 	left: "15dp",
@@ -81,7 +81,7 @@ overrode the settings with other TSS, XML, or JS settings:
 "TextField": {
 	width: "50%",
 	font: {
-        fontSize: "12pt"
+        fontSize: "10pt"
     },
 	color: "#000",	
 	borderRadius: 0,
@@ -94,7 +94,7 @@ overrode the settings with other TSS, XML, or JS settings:
 	width: "50%",
 	height: "22pt",
 	font: {
-        fontSize: "14pt",
+        fontSize: "12pt",
 		fontWeight: 'bold'
     },
 	backgroundColor: '#0B74D6',
@@ -111,7 +111,7 @@ overrode the settings with other TSS, XML, or JS settings:
 	width: "40%",
 	height: "18pt",
 	font: {
-        fontSize: "12pt",
+        fontSize: "11pt",
 		fontWeight: 'bold'
     },
 	backgroundColor: '#538ed3',

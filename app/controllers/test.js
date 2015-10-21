@@ -77,22 +77,15 @@ self.soundAnim = function() {
 	if ( self.playing ) {
 		if ( self.soundAnimFrame == 0 ) {	
 			self.soundAnimFrame = 1;
-			if ( self.soundon2 )
-				self.soundon2.show();
 			if ( self.soundon )
-				self.soundon.hide();
+				self.soundon.image = "/images/soundon2.png";
 		} else {
 			self.soundAnimFrame = 0;
-			if ( self.soundon2 )
-				self.soundon2.hide();
 			if ( self.soundon )
-				self.soundon.show();
+				self.soundon.image = "/images/soundon.png";
 		}
 	} else {
-		if ( self.soundon2 )
-			self.soundon2.hide();
-		if ( self.soundon )
-			self.soundon.hide();
+		self.soundon.image = "/images/soundoff.png";
 	}
 };
 
@@ -100,14 +93,10 @@ self.soundAnim = function() {
 self.setSound = function( value ) {
 	self.playing = value;
 	if ( value ) {
-		if ( self.soundoff )	
-			self.soundoff.hide();
-		if ( self.soundon2 )
-			self.soundon2.hide();
+		if ( self.soundon )
+			self.soundon.image = "/images/soundon.png";
 		if ( self.question )
 			self.question.show();
-		if ( self.soundon )
-			self.soundon.show();
 		
 		if ( self.btn_yes )
 			self.btn_yes.show();
@@ -123,12 +112,8 @@ self.setSound = function( value ) {
 	} else {
 		clearInterval(self.soundAnimTimer);
 		
-		if ( self.soundoff )
-			self.soundoff.show();
-		if ( self.soundon2 )
-			self.soundon2.hide();
 		if ( self.soundon )
-			self.soundon.hide();
+			self.soundon.image = "/images/soundoff.png";
 		if ( self.question )
 			self.question.hide();
 			

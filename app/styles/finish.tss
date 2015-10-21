@@ -1,12 +1,15 @@
 ".content": {
-	top: "40px",
 	textAlign: "center"
 }
 
+".innerView": {
+	layout: "composite",
+}
+
 "#btn_done": {
-	top: "90px"
+	"top": "80dp"
 }
 
 "#btn_restart": {
-	top: "150px"
+	"top": "160dp"
 }

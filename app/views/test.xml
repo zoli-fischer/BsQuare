@@ -3,12 +3,10 @@
 		<ScrollView class="innerView" showVerticalScrollIndicator="true" showHorizontalScrollIndicator="false">
 			<Label id="content"></Label>	
 			<ImageView id="soundon" image="/images/soundon.png" />
-			<ImageView id="soundon2" image="/images/soundon2.png" />
-			<ImageView id="soundoff" image="/images/soundoff.png" />
 			<Label id="question">L('test_text')</Label>	
 			<Button id="btn_yes" titleid="test_yes" onClick="doYes"></Button>
 			<Button id="btn_no" titleid="test_no" onClick="doNo"></Button>
-			<Button class="smallButton" id="btn_stop" titleid="test_stop" onClick="doStop"></Button>
+			<Button class="smallButton" id="btn_stop" titleid="test_stop" onClick="doStop"></Button>	
 		</ScrollView>
 	</Window>
 </Alloy>
