@@ -37,6 +37,11 @@ overrode the settings with other TSS, XML, or JS settings:
 	right: "20px"
 }
 
+"ListView": {
+	left: "20px",
+	top: "20px",
+}
+
 "ListItem": {
 	font: {
         fontSize: '18px'

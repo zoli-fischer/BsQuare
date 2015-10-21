@@ -35,19 +35,32 @@ self.sound = null;
 
 //sound play
 self.sound_play = function( value ) {
-	if ( self.sound )
-		if ( value ) {
-			// create the sound/media object
-			self.sound = Titanium.Media.createSound({
-				url: '/images/2000sine.wav',
-				preload: true
-			});	
-			self.sound.setLooping(true);	
-			self.sound.play();
-		} else {
-			self.sound.setLooping(false);	
-			self.sound.stop();
+	if ( value ) {
+		
+		var hertz = 4000;
+		switch ( Alloy.Globals.user.test_index ) {
+			case 2:
+				hertz = 2000;
+				break;
+			case 3:
+				hertz = 1000;
+				break;
+			case 4:
+				hertz = 500;
+				break;
 		}
+		
+		// create the sound/media object
+		self.sound = Titanium.Media.createSound({
+			url: '/images/'+hertz+'sine.wav',
+			preload: true
+		});	
+		self.sound.setLooping(true);	
+		self.sound.play();
+	} else if ( self.sound ) {
+		self.sound.setLooping(false);	
+		self.sound.stop();
+	}
 };
 
 //
@@ -133,12 +146,6 @@ self.setSound = function( value ) {
 //on window open
 view.addEventListener("open",function(event) {
 	
-	// create the sound/media object
-	self.sound = Titanium.Media.createSound({
-		url: '/images/2000sine.wav',
-		preload: true
-	});
-
 	//reset test index
 	Alloy.Globals.user.test_index = 1;
 	
@@ -206,8 +213,14 @@ function doStop() {
 		
 			//close view
 	  		view.close();
-	 	};
+	 } else {
+	 	if ( self.sound )
+			self.sound.play();
+	 }
 	});
+	
+	if ( self.sound )
+		self.sound.pause();
 	
 	//show dialog
 	dialog.show();

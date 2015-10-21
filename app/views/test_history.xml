@@ -3,11 +3,11 @@
 		<ScrollView class="innerView" showVerticalScrollIndicator="true" showHorizontalScrollIndicator="false">
 			<ListView id="list">
 		        <ListSection>
-		            <ListItem title="08.10.2015 14:25">08.10.2015 14:25</ListItem>
-		            <ListItem title="04.10.2015 16:53">04.10.2015 16:53</ListItem>
-		            <ListItem title="04.10.2015 09:12">04.10.2015 09:12</ListItem>
+		            <ListItem title="1. 08.10.2015 14:25 - 60%">1. 08.10.2015 14:25 - 60%</ListItem>
+		            <ListItem title="2. 04.10.2015 16:53 - 80%">2. 04.10.2015 16:53 - 80%</ListItem>
+		            <ListItem title="3. 04.10.2015 09:12 - 75%">3. 04.10.2015 09:12 - 75%</ListItem>
 		        </ListSection>
-		    </ListView>   	
+		    </ListView>
 		</ScrollView>
 	</Window>
 </Alloy>
