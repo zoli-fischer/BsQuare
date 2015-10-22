@@ -1,14 +1,12 @@
-".innerView": {
-	layout: "composite",
+".content": {
+	layout: "vertical",
+	height: Ti.UI.FILL
 }
 
-/*
-".content": {
-	bottom: "50dp",
+"Label": {
+	bottom: "20dp"
 }
-*/
 
 "#start_test": {
-	"width": "80%",
-	"bottom": "30dp"
+	"width": "80%", 
 }

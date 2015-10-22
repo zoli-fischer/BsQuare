@@ -53,21 +53,21 @@ overrode the settings with other TSS, XML, or JS settings:
 
 "ListItem": {
 	font: {
-        fontSize: "10pt"
+        fontSize: "16dp"
     },
     color: "#000"
 }
 
 "Label": {
 	font: {
-        fontSize: "10pt"
+        fontSize: "16dp"
     },
     color: "#000"
 }
 
 ".content": {
 	font: {
-        fontSize: "10pt"
+        fontSize: "16dp"
     },
     color: "#000",
 	left: "15dp",
@@ -81,7 +81,7 @@ overrode the settings with other TSS, XML, or JS settings:
 "TextField": {
 	width: "50%",
 	font: {
-        fontSize: "10pt"
+        fontSize: "16dp"
     },
 	color: "#000",	
 	borderRadius: 0,
@@ -92,9 +92,9 @@ overrode the settings with other TSS, XML, or JS settings:
 
 "Button": {
 	width: "50%",
-	height: "22pt",
+	height: "36dp",
 	font: {
-        fontSize: "12pt",
+        fontSize: "18dp",
 		fontWeight: 'bold'
     },
 	backgroundColor: '#0B74D6',
@@ -109,9 +109,9 @@ overrode the settings with other TSS, XML, or JS settings:
 
 ".smallButton": {
 	width: "40%",
-	height: "18pt",
+	height: "32dp",
 	font: {
-        fontSize: "11pt",
+        fontSize: "16dp",
 		fontWeight: 'bold'
     },
 	backgroundColor: '#538ed3',

@@ -25,7 +25,7 @@ Alloy.Globals.user = (function() {
 	
 	//check if user is
 	self.is = function() {
-		return self.cpr() != '';
+		return self.cpr() && self.cpr() != '';
 	};
 	
 	//clear user
@@ -72,7 +72,7 @@ Alloy.Globals.activityIndicatorWnd = (function() {
 		self.activityIndicator = Ti.UI.createActivityIndicator({
 		  color: '#000',
 		  indicatorColor: '#0B74D6',
-		  font: { fontSize: "10pt" },
+		  font: { fontSize: "16dp" },
 		  message: obj.message,
 		  style: Ti.Platform.name === 'iPhone OS' ? Ti.UI.iPhone.ActivityIndicatorStyle.DARK : Ti.UI.ActivityIndicatorStyle.DARK,	  
 		  height: Ti.UI.SIZE,

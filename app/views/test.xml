@@ -6,7 +6,8 @@
 			<Label id="question">L('test_text')</Label>	
 			<Button id="btn_yes" titleid="test_yes" onClick="doYes"></Button>
 			<Button id="btn_no" titleid="test_no" onClick="doNo"></Button>
-			<Button class="smallButton" id="btn_stop" titleid="test_stop" onClick="doStop"></Button>	
+			<Button class="smallButton" id="btn_stop" titleid="test_stop" onClick="doStop"></Button>
+			<Label> </Label>		
 		</ScrollView>
 	</Window>
 </Alloy>

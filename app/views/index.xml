@@ -6,6 +6,7 @@
 			<TextField id="cpr_number" onReturn="doSubmit"></TextField>
 			<Button id="login" onClick="doSubmit" titleid="btn_login"></Button>
 			<Button class="smallButton" onClick="showHelp" titleid="menu_help"></Button>		
+			<Label></Label>
 		</ScrollView>
 	</Window>
 </Alloy>

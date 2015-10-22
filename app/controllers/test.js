@@ -30,6 +30,15 @@ self.test_start_real = function() {
 	self.setSound(true);
 };
 
+//list of sounds
+self.sounds = [
+	0,
+	500,
+	1000,
+	2000,
+	4000
+];
+
 //sound object
 self.sound = null;
 
