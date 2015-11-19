@@ -1,6 +1,6 @@
 {
 	"global": {
-		"cprApiUrl": "http://zoltan.web2it.net/cpr-validate.php"		
+		"cprApiUrl": "http://zoltan.web2it.net/BsQuare-stats/index.php?api&cmd=check_cpr"		
 	},
 	"env:development": {},
 	"env:test": {},

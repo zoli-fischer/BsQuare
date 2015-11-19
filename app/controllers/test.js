@@ -4,13 +4,19 @@ var args = arguments[0] || {};
 
 function updateContent() {
 	//set content text
-	self.content.text = String.format(L('test_title'),Alloy.Globals.user.test_index);
+	self.content.text = String.format(L('test_title'),self.test_index+1);
 	
 	//android update bar
 	if ( Ti.Platform.name === "android" && view && view.activity ) {
 		view.activity.actionBar.title = self.content.text;
 	}
 };
+
+//
+self.test_sounds = null;
+
+//current test sound
+self.test_index = 0;
 
 //
 self.test_start_timer = null;
@@ -30,15 +36,6 @@ self.test_start_real = function() {
 	self.setSound(true);
 };
 
-//list of sounds
-self.sounds = [
-	0,
-	500,
-	1000,
-	2000,
-	4000
-];
-
 //sound object
 self.sound = null;
 
@@ -46,26 +43,19 @@ self.sound = null;
 self.sound_play = function( value ) {
 	if ( value ) {
 		
-		var hertz = 4000;
-		switch ( Alloy.Globals.user.test_index ) {
-			case 2:
-				hertz = 2000;
-				break;
-			case 3:
-				hertz = 1000;
-				break;
-			case 4:
-				hertz = 500;
-				break;
-		}
+		hertz = self.test_sounds[self.test_index].hz;
 		
 		// create the sound/media object
-		self.sound = Titanium.Media.createSound({
-			url: '/images/'+hertz+'sine.wav',
-			preload: true
-		});	
-		self.sound.setLooping(true);	
-		self.sound.play();
+		if ( hertz != '' ) {
+			self.sound = Titanium.Media.createSound({
+				url: '/images/'+hertz+'sine.mp3',
+				preload: true
+			});
+			self.sound.setLooping(true);	
+			self.sound.play();
+		} else {
+			self.sound = null;	
+		}	
 	} else if ( self.sound ) {
 		self.sound.setLooping(false);	
 		self.sound.stop();
@@ -107,8 +97,10 @@ self.setSound = function( value ) {
 		if ( self.question )
 			self.question.show();
 		
-		if ( self.btn_yes )
-			self.btn_yes.show();
+		if ( self.btn_yes_left )
+			self.btn_yes_left.show();
+		if ( self.btn_yes_right )
+			self.btn_yes_right.show();
 		if ( self.btn_no )
 			self.btn_no.show();
 		
@@ -126,8 +118,10 @@ self.setSound = function( value ) {
 		if ( self.question )
 			self.question.hide();
 			
-		if ( self.btn_yes )
-			self.btn_yes.hide();
+		if ( self.btn_yes_left )
+			self.btn_yes_left.hide();
+		if ( self.btn_yes_right )
+			self.btn_yes_right.hide();
 		if ( self.btn_no )
 			self.btn_no.hide();
 		
@@ -141,8 +135,11 @@ self.setSound = function( value ) {
 view.addEventListener("open",function(event) {
 	
 	//reset test index
-	Alloy.Globals.user.test_index = 1;
+	self.test_index = 0;
 	
+	//sounds
+	self.test_sounds = Alloy.Globals.user.test_sounds_result();
+
 	//set action bar
 	Alloy.Globals.setActionBar( self, false, false );
 	
@@ -160,13 +157,43 @@ view.addEventListener("close",function(event) {
 		self.test_start( false );
 });
 
+//say left
+function doLeft() {
+	doYes();
+}
+
+//say right
+function doRight() {
+	doYes();
+}
+
+
+//say yes
 function doYes() {
 	
-	//increase test index
-	Alloy.Globals.user.test_index++;	
+	//set answer
+	self.test_sounds[self.test_index].answer = 2;
 	
+	doAnswer();
+};	
+
+//say no
+function doNo() {
+	
+	//set answer
+	self.test_sounds[self.test_index].answer = 1;
+	
+	doAnswer();
+};
+	
+//set answer
+function doAnswer() {
+			
+	//increase test index
+	self.test_index++;	
+		
 	//show finish
-	if ( Alloy.Globals.user.test_index == 5 ) {
+	if ( self.test_index == self.test_sounds.length ) {
 		
 		//stop test
 		if ( self.test_start )
@@ -188,7 +215,6 @@ function doYes() {
 		
 	}
 };
-var doNo = doYes;
 
 function doStop() {
 	

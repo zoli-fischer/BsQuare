@@ -107,7 +107,7 @@ function doSubmit() {
 			});
 			
 			//http://zoltan.web2it.net/cpr-validate.php?cpr=#CPR# -> http://cpr-validering.dk/api/api/validate
-			xhr.open('GET',Alloy.CFG.cprApiUrl+"?cpr="+$.cpr_number.value, true );
+			xhr.open('GET',Alloy.CFG.cprApiUrl+"&cpr="+$.cpr_number.value, true );
 			xhr.send();	
 		} else {
 			

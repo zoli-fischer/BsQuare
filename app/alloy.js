@@ -10,6 +10,28 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
+//shuffle array
+Alloy.Globals.shuffle = function(array) {
+  var currentIndex = array.length, 
+  	  temporaryValue, 
+  	  randomIndex;
+
+  // While there remain elements to shuffle...
+  while ( 0 !== currentIndex ) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  };
+
+  return array;
+};
+
 //logged user data
 Alloy.Globals.user = (function() {
 	var self = this;
@@ -33,12 +55,37 @@ Alloy.Globals.user = (function() {
 		self.cpr('');
 	};
 	
-	//todo only for showcase
-	self.test_index = 1;
+	//list of test sounds
+	self.test_sounds = [
+		'',
+		'500L',
+		'1000L',
+		'2000L',
+		'4000L',
+		'500R',
+		'1000R',
+		'2000R',
+		'4000R'
+	];
+	
+	//randomze test sound array
+	self.test_sounds_result = function(){
+		var arr = [],
+			sounds = self.test_sounds.length;
+		for ( i in self.test_sounds ) {
+			arr.push({
+				hz: self.test_sounds[i],
+				answer: 0 //0 - nothing, 1 - no, 2 - yes
+			});
+		}
+		return Alloy.Globals.shuffle(arr);
+	};
 	
 	return self;
 
 })();
+
+
 
 //show activity indicator
 Alloy.Globals.activityIndicatorWnd = (function() {

@@ -7,7 +7,7 @@
 
 "ImageView": {
 	top: "10dp",
-	width: "60%"
+	width: "30%"
 }
 
 "#content": {
@@ -15,6 +15,46 @@
 		fontWeight: "bold",
 	},
 	top: "20dp",
+}
+
+"#question": {
+	top: "10dp"
+}
+
+"#btn_yes_holder": {
+	layout: "horizontal",
+	top: "20dp",
+	left: "15dp",
+	right: "15dp",
+	height: "90dp"
+}
+
+"#btn_yes_left": {
+	layout: "vertical",
+	width: "40%",
+	height: "100%",
+	backgroundColor: "#00c685",
+	left: "0"
+}
+
+"#btn_yes_right": {
+	layout: "vertical",
+	width: "40%",
+	height: "100%",
+	backgroundColor: "#00c685",
+	left: "20%"
+}
+
+".btn_yes_label": {
+	font: {
+        fontSize: "18dp",
+		fontWeight: 'bold'
+    },
+    color: "#fff", 
+}
+
+".btn_yes_image": { 
+	height: "45dp"
 }
 
 "#btn_yes": {
@@ -25,7 +65,8 @@
 
 "#btn_no": {
 	width: "80%",
-	backgroundColor: "#f88cae",
+	//backgroundColor: "#f88cae",
+	backgroundColor: "#a7a7a7",
 	top: "20dp"
 }
 

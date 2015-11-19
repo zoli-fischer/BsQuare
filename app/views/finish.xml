@@ -2,7 +2,7 @@
 	<Window title="L('finish_title')" exitOnClose="false" modal="false">
 		<ScrollView class="innerView" showVerticalScrollIndicator="true" showHorizontalScrollIndicator="false">
 			<Label class="content">L('finish_text')</Label>		
-			<Button id="btn_done" titleid="finish_btn_done" onClick="doDone"></Button>
+			<Button id="btn_done" titleid="finish_btn_done" onClick="doSend"></Button>
 			<Button class="smallButton"  id="btn_restart" titleid="finish_btn_restart" onClick="doRestart"></Button>
 		</ScrollView>
 	</Window>

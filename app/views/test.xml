@@ -3,11 +3,24 @@
 		<ScrollView class="innerView" showVerticalScrollIndicator="true" showHorizontalScrollIndicator="false">
 			<Label id="content"></Label>	
 			<ImageView id="soundon" image="/images/soundon.png" />
-			<Label id="question">L('test_text')</Label>	
-			<Button id="btn_yes" titleid="test_yes" onClick="doYes"></Button>
-			<Button id="btn_no" titleid="test_no" onClick="doNo"></Button>
+			<Label id="question">L('test_text_left_right')</Label>	
+			
+			<View id="btn_yes_holder">
+				
+				<View id="btn_yes_left" onClick="doLeft">	
+					<ImageView class="btn_yes_image" image="/images/left_ear.png"></ImageView>
+					<Label class="btn_yes_label">L('test_yes_left')</Label>
+				</View>
+				<View id="btn_yes_right" onClick="doRight">		
+					<ImageView class="btn_yes_image" image="/images/right_ear.png"></ImageView>
+					<Label class="btn_yes_label">L('test_yes_right')</Label>
+				</View>
+			
+			</View>
+			<Button id="btn_no" titleid="test_cant_hear" onClick="doNo"></Button>
+			
 			<Button class="smallButton" id="btn_stop" titleid="test_stop" onClick="doStop"></Button>
-			<Label> </Label>		
+					
 		</ScrollView>
 	</Window>
 </Alloy>
