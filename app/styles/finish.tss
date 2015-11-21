@@ -7,9 +7,9 @@
 }
 
 "#btn_done": {
-	"top": "80dp"
+	"top": "140dp"
 }
 
 "#btn_restart": {
-	"top": "140dp"
+	"top": "190dp"
 }

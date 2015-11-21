@@ -21,8 +21,7 @@
 	top: "10dp"
 }
 
-"#btn_yes_holder": {
-	layout: "horizontal",
+"#btn_yes_holder": { 
 	top: "20dp",
 	left: "15dp",
 	right: "15dp",
@@ -31,18 +30,20 @@
 
 "#btn_yes_left": {
 	layout: "vertical",
-	width: "40%",
+	width: "45%",
 	height: "100%",
 	backgroundColor: "#00c685",
-	left: "0"
+	left: "0",
+	height: "90dp"
 }
 
 "#btn_yes_right": {
 	layout: "vertical",
-	width: "40%",
+	width: "45%",
 	height: "100%",
 	backgroundColor: "#00c685",
-	left: "20%"
+	right: "0",
+	height: "90dp"
 }
 
 ".btn_yes_label": {
@@ -64,7 +65,12 @@
 }
 
 "#btn_no": {
-	width: "80%",
+	font: {
+        fontSize: "16dp",
+    },
+	left: "15dp",
+	right: "15dp",
+	width: Ti.UI.FILL,
 	//backgroundColor: "#f88cae",
 	backgroundColor: "#a7a7a7",
 	top: "20dp"

@@ -6,6 +6,11 @@ var args = arguments[0] || {};
 view.addEventListener("open",function(event) {	
 	//set action bar
 	Alloy.Globals.setActionBar( self, false, false );
+	
+	var result = Alloy.Globals.user.result();
+	
+	//set finish text
+	self.finish_text.text = String.format(L('finish_text'),result.score > 0 ? L('finish_result_'+result.score) : '',result.score_left.toFixed(0).toString()+'%',result.score_right.toFixed(0).toString()+'%');
 });
 
 //ajax request client
@@ -25,16 +30,34 @@ function doSend() {
 		}
 	});
 	
+	//close view
+	view.close();
+		
 	//abort ajax call
 	if ( xhr )
 		xhr.abort();
-	
-	setTimeout(function(){
-		//close view
-		view.close();
 		
-		alert(L('finish_sent'));
-	},3000);	
+	//create ajax call
+	xhr = Ti.Network.createHTTPClient({
+		onload: function(e) {
+			
+			Alloy.Globals.activityIndicatorWnd.hide();
+			
+			alert(L('finish_sent'));
+		},
+		onerror: function(e) {
+			
+			Alloy.Globals.activityIndicatorWnd.hide();
+			
+			alert(L('finish_sending_error'));
+		}
+	});
+		
+	Titanium.API.info( Alloy.Globals.user.result_json() );
+	
+	xhr.open('GET',Alloy.CFG.sendResultApiUrl+"&cpr="+Alloy.Globals.user.cpr()+'&result='+Alloy.Globals.user.result_json(), true );
+	xhr.send();
+	
 };
 
 function doRestart() {

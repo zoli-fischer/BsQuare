@@ -12,9 +12,6 @@ function updateContent() {
 	}
 };
 
-//
-self.test_sounds = null;
-
 //current test sound
 self.test_index = 0;
 
@@ -43,7 +40,7 @@ self.sound = null;
 self.sound_play = function( value ) {
 	if ( value ) {
 		
-		hertz = self.test_sounds[self.test_index].hz;
+		hertz = Alloy.Globals.user.last_test_sounds[self.test_index].hz;
 		
 		// create the sound/media object
 		if ( hertz != '' ) {
@@ -137,8 +134,8 @@ view.addEventListener("open",function(event) {
 	//reset test index
 	self.test_index = 0;
 	
-	//sounds
-	self.test_sounds = Alloy.Globals.user.test_sounds_result();
+	//randomize test sounds
+	Alloy.Globals.user.set_last_test_sounds();
 
 	//set action bar
 	Alloy.Globals.setActionBar( self, false, false );
@@ -159,20 +156,25 @@ view.addEventListener("close",function(event) {
 
 //say left
 function doLeft() {
-	doYes();
+	//set answer
+	Alloy.Globals.user.last_test_sounds[self.test_index].answer = 'L';
+	 
+	doAnswer();
 }
 
 //say right
 function doRight() {
-	doYes();
+	//set answer
+	Alloy.Globals.user.last_test_sounds[self.test_index].answer = 'R';
+	
+	doAnswer();
 }
 
 
 //say yes
 function doYes() {
-	
 	//set answer
-	self.test_sounds[self.test_index].answer = 2;
+	Alloy.Globals.user.last_test_sounds[self.test_index].answer = 'yes';
 	
 	doAnswer();
 };	
@@ -181,7 +183,7 @@ function doYes() {
 function doNo() {
 	
 	//set answer
-	self.test_sounds[self.test_index].answer = 1;
+	Alloy.Globals.user.last_test_sounds[self.test_index].answer = '';
 	
 	doAnswer();
 };
@@ -193,7 +195,7 @@ function doAnswer() {
 	self.test_index++;	
 		
 	//show finish
-	if ( self.test_index == self.test_sounds.length ) {
+	if ( self.test_index == Alloy.Globals.user.last_test_sounds.length ) {
 		
 		//stop test
 		if ( self.test_start )

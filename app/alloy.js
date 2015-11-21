@@ -55,7 +55,7 @@ Alloy.Globals.user = (function() {
 		self.cpr('');
 	};
 	
-	//list of test sounds
+	//list of available test sounds
 	self.test_sounds = [
 		'',
 		'500L',
@@ -75,10 +75,101 @@ Alloy.Globals.user = (function() {
 		for ( i in self.test_sounds ) {
 			arr.push({
 				hz: self.test_sounds[i],
-				answer: 0 //0 - nothing, 1 - no, 2 - yes
+				answer: ''
 			});
 		}
 		return Alloy.Globals.shuffle(arr);
+	};
+	
+	//list of last/current test sounds
+	self.last_test_sounds = null;
+	
+	//set current test sound
+	self.set_last_test_sounds = function(){
+		self.last_test_sounds = self.test_sounds_result();
+	};
+	
+	//generate result data
+	self.result = function(){
+		var result = {
+			score_left: 0,
+			score_right: 0,
+			score: 0,
+			result: self.last_test_sounds
+		},
+		score_left = 0,
+		score_right = 0,
+		total_left = 0,
+		total_right = 0,
+		score = 0;
+		
+		for ( i in self.last_test_sounds ) {
+			var hz = self.last_test_sounds[i].hz,
+				answer = self.last_test_sounds[i].answer,
+				is_left = hz.indexOf('L') > -1,
+				is_right = hz.indexOf('R') > -1,
+				is_none = !is_left && !is_right, 
+				is_answer_left = answer == 'L',
+				is_answer_right = answer == 'R',
+				is_answer_none = !is_answer_left && !is_answer_right,
+				is_correct = ( is_left && is_answer_left ) || ( is_right && is_answer_right ) || ( is_none && is_answer_none );				
+			
+			Titanium.API.info( 'hz:'+hz );
+			Titanium.API.info( 'answer:'+answer );
+			Titanium.API.info( 'is left:'+is_left );
+			Titanium.API.info( 'is right:'+is_right );
+			Titanium.API.info( 'is answ left:'+is_answer_left );
+			Titanium.API.info( 'is answ right:'+is_answer_right );
+			Titanium.API.info( 'is correct:'+is_correct );
+			
+			if ( is_correct ) {
+				if ( is_left || is_none ) {
+					total_left++,
+					score_left += 1;
+				}
+				if ( is_right || is_none ) {
+					total_right++,
+					score_right += 1;
+				}
+			} else {
+				if ( is_left || is_none ) {
+					total_left++,
+					score_left -= 1;
+				}
+				if ( is_right || is_none ) {
+					total_right++,
+					score_right -= 1; 
+				}
+			}	
+		}
+		
+		Titanium.API.info( 'Score left:'+score_left );
+		Titanium.API.info( 'Total left:'+total_left );
+		Titanium.API.info( 'Score right:'+score_right );
+		Titanium.API.info( 'Total right:'+total_right );
+			
+		//set left/right scores
+		result.score_left = score_left * 100 / total_left;
+		result.score_right = score_right * 100 / total_right;
+		
+		//set total score
+		score = ( result.score_left + result.score_right ) / 2;
+		if ( score > 90 ) {
+			result.score = 4;
+		} else if ( score > 50 && score <= 90 ) {
+			result.score = 3;
+		} else if ( score > 30 && score <= 50 ) {
+			result.score = 2;
+		} else {
+			result.score = 1;
+		}
+		
+		return result;
+	};
+	
+	//generate result data json
+	self.result_json = function(){
+		return JSON.stringify(self.result());
 	};
 	
 	return self;

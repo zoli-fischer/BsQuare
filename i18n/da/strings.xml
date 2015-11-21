@@ -63,7 +63,18 @@
 	
 	<!--finish-->
 	<string name="finish_title">Færdi</string>
-	<string name="finish_text">Tak, hørelsetesten er færdig.</string>
+	<string name="finish_text">Tak, hørelsetesten er færdig.
+\n\n
+Resultat: %s
+\n
+Venstre øre: %s
+\n
+Højre øre: %s	
+</string>
+	<string name="finish_result_1">Meget dårlig</string>
+	<string name="finish_result_2">Dårlig</string>
+	<string name="finish_result_3">God</string>
+	<string name="finish_result_4">Fremragende</string>
 	<string name="finish_btn_done">Send resultat</string>
 	<string name="finish_btn_restart">Gen starte</string>
 	<string name="finish_confirm">Er du sikker på, du ikke ønsker at sende resultatet?</string>
