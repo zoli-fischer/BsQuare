@@ -150,7 +150,9 @@ Alloy.Globals.user = (function() {
 			
 		//set left/right scores
 		result.score_left = score_left * 100 / total_left;
+		result.score_left = result.score_left < 0 ? 0 : result.score_left;
 		result.score_right = score_right * 100 / total_right;
+		result.score_right = result.score_right < 0 ? 0 : result.score_right;
 		
 		//set total score
 		score = ( result.score_left + result.score_right ) / 2;

@@ -1,7 +1,8 @@
 {
 	"global": {
 		"cprApiUrl": "http://zoltan.web2it.net/BsQuare-stats/index.php?api&cmd=check_cpr",
-		"sendResultApiUrl": "http://zoltan.web2it.net/BsQuare-stats/index.php?api&cmd=new_result"		
+		"sendResultApiUrl": "http://zoltan.web2it.net/BsQuare-stats/index.php?api&cmd=new_result",
+		"getResultsApiUrl": "http://zoltan.web2it.net/BsQuare-stats/index.php?api&cmd=get_results"	
 	},
 	"env:development": {},
 	"env:test": {},
