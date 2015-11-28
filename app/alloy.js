@@ -92,11 +92,14 @@ Alloy.Globals.user = (function() {
 	//generate result data
 	self.result = function(){
 		var result = {
+			fake: false,
 			score_left: 0,
 			score_right: 0,
 			score: 0,
 			result: self.last_test_sounds
 		},
+		threshold_left = 6000,
+		threshold_right = 6000,
 		score_left = 0,
 		score_right = 0,
 		total_left = 0,
@@ -105,6 +108,7 @@ Alloy.Globals.user = (function() {
 		
 		for ( i in self.last_test_sounds ) {
 			var hz = self.last_test_sounds[i].hz,
+				hz_nr = parseInt(self.last_test_sounds[i].hz.replace("L","").replace("R","")),
 				answer = self.last_test_sounds[i].answer,
 				is_left = hz.indexOf('L') > -1,
 				is_right = hz.indexOf('R') > -1,
@@ -115,6 +119,7 @@ Alloy.Globals.user = (function() {
 				is_correct = ( is_left && is_answer_left ) || ( is_right && is_answer_right ) || ( is_none && is_answer_none );				
 			
 			Titanium.API.info( 'hz:'+hz );
+			Titanium.API.info( 'hz_nr:'+hz_nr );
 			Titanium.API.info( 'answer:'+answer );
 			Titanium.API.info( 'is left:'+is_left );
 			Titanium.API.info( 'is right:'+is_right );
@@ -135,18 +140,36 @@ Alloy.Globals.user = (function() {
 				if ( is_left || is_none ) {
 					total_left++,
 					score_left -= 1;
-				}
+					
+					if ( hz_nr > 0 && hz_nr < threshold_left ){
+						threshold_left =  parseInt(hz);
+					}
+				}	
 				if ( is_right || is_none ) {
 					total_right++,
 					score_right -= 1; 
+					
+					if ( hz_nr > 0 && hz_nr < threshold_right ){
+						threshold_right = parseInt(hz);
+					}
 				}
+				//if not correct on no sound flag as fake 
+				if ( is_none )
+					result.fake = true;
 			}	
 		}
+		
+		Titanium.API.info( 'threshold left:'+threshold_left );
+		Titanium.API.info( 'threshold left:'+threshold_right );
 		
 		Titanium.API.info( 'Score left:'+score_left );
 		Titanium.API.info( 'Total left:'+total_left );
 		Titanium.API.info( 'Score right:'+score_right );
 		Titanium.API.info( 'Total right:'+total_right );
+		
+		//set left/right thresholds
+		result.threshold_left = threshold_left;
+		result.threshold_right = threshold_right;
 			
 		//set left/right scores
 		result.score_left = score_left * 100 / total_left;

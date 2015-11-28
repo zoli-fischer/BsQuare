@@ -70,7 +70,11 @@ Result: %s
 \n
 Left ear: %s
 \n
+Treshould left ear: %s
+\n
 Right ear: %s		
+\n
+Treshould right ear: %s
 </string>
 	<string name="finish_result_1">Really bad</string>
 	<string name="finish_result_2">Bad</string>

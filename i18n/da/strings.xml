@@ -70,7 +70,11 @@ Resultat: %s
 \n
 Venstre øre: %s
 \n
+Treshould venstre øre: %s
+\n
 Højre øre: %s	
+\n
+Treshould venstre øre: %s
 </string>
 	<string name="finish_result_1">Meget dårlig</string>
 	<string name="finish_result_2">Dårlig</string>

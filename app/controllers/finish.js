@@ -10,7 +10,7 @@ view.addEventListener("open",function(event) {
 	var result = Alloy.Globals.user.result();
 	
 	//set finish text
-	self.finish_text.text = String.format(L('finish_text'),result.score > 0 ? L('finish_result_'+result.score) : '',result.score_left.toFixed(0).toString()+'%',result.score_right.toFixed(0).toString()+'%');
+	self.finish_text.text = String.format(L('finish_text'),result.score > 0 ? L('finish_result_'+result.score) : '',result.score_left.toFixed(0).toString()+'%',result.threshold_left.toFixed(0).toString()+' hz',result.score_right.toFixed(0).toString()+'%',result.threshold_right.toFixed(0).toString()+' hz');
 });
 
 //ajax request client
